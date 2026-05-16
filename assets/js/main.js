@@ -237,6 +237,24 @@
     }
   });
 
+  const menuButton = document.querySelector("[data-menu-toggle]");
+  const siteHeader = document.querySelector(".site-header");
+  if (menuButton && siteHeader) {
+    const setMenu = (open) => {
+      siteHeader.classList.toggle("is-menu-open", open);
+      menuButton.setAttribute("aria-expanded", String(open));
+    };
+    menuButton.addEventListener("click", () => {
+      setMenu(!siteHeader.classList.contains("is-menu-open"));
+    });
+    document.querySelectorAll(".main-nav a").forEach((link) => {
+      link.addEventListener("click", () => setMenu(false));
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 760) setMenu(false);
+    });
+  }
+
   const themeButton = document.querySelector("[data-theme-toggle]");
   if (themeButton) {
     themeButton.addEventListener("click", () => {

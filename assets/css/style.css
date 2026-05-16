@@ -164,6 +164,7 @@ main {
 .button,
 .icon-button,
 .lang-button,
+.menu-button,
 .link-button {
   min-height: 40px;
   border: 2px solid var(--line);
@@ -190,6 +191,7 @@ main {
 .main-nav a:hover,
 .button:hover,
 .icon-button:hover,
+.menu-button:hover,
 .chip:hover,
 .link-button:hover {
   transform: translate(2px, 2px);
@@ -201,6 +203,23 @@ main {
   height: 44px;
   padding: 0;
   font-weight: 900;
+}
+
+.menu-button {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  place-items: center;
+  gap: 4px;
+}
+
+.menu-button span {
+  display: block;
+  width: 20px;
+  height: 4px;
+  background: currentColor;
+  box-shadow: 2px 2px 0 var(--shadow);
 }
 
 .lang-button {
@@ -825,7 +844,6 @@ textarea:focus {
 }
 
 @media (max-width: 900px) {
-  .site-header,
   .hero,
   .two-col,
   .console-strip,
@@ -844,6 +862,7 @@ textarea:focus {
   }
 
   .lang-button,
+  .menu-button,
   .icon-button {
     justify-self: start;
   }
@@ -862,6 +881,56 @@ textarea:focus {
   }
 }
 
+@media (max-width: 760px) {
+  main {
+    padding-block: 24px 40px;
+  }
+
+  .site-header {
+    grid-template-columns: minmax(0, 1fr) auto auto auto;
+    gap: 8px;
+    min-height: 0;
+    padding: 10px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand span:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .menu-button {
+    display: grid;
+  }
+
+  .main-nav {
+    grid-column: 1 / -1;
+    display: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .site-header.is-menu-open .main-nav {
+    display: grid;
+  }
+
+  .main-nav a {
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  .lang-button,
+  .icon-button,
+  .menu-button {
+    justify-self: end;
+  }
+}
+
 @media (max-width: 560px) {
   .site-header,
   .site-footer,
@@ -872,12 +941,6 @@ textarea:focus {
   .hero {
     min-height: auto;
     padding: 22px;
-  }
-
-  .main-nav a {
-    flex: 1 1 calc(33.333% - 6px);
-    justify-content: center;
-    padding-inline: 8px;
   }
 
   .hero-actions .button {
