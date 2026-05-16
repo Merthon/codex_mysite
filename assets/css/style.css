@@ -391,8 +391,7 @@ h3 {
 .post-card,
 .console-box,
 .toolbar,
-.guestbook,
-.skill-card {
+.guestbook {
   border: 3px solid var(--line);
   background: color-mix(in srgb, var(--panel) 94%, black);
   box-shadow: 6px 6px 0 var(--shadow);
@@ -444,6 +443,33 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin: 0;
+}
+
+.social-dock {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.social-dock a {
+  display: grid;
+  place-items: center;
+  min-height: 42px;
+  border: 2px solid var(--line);
+  color: var(--text);
+  background: var(--panel-2);
+  box-shadow: 3px 3px 0 var(--shadow);
+  font-weight: 900;
+  clip-path: var(--pixel-cut);
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+.social-dock a:hover {
+  color: #11121a;
+  background: var(--accent-2);
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--shadow);
 }
 
 .status-grid div {
@@ -693,36 +719,6 @@ textarea:focus {
   padding: 18px;
 }
 
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.skill-card {
-  min-height: 260px;
-  padding: 20px;
-}
-
-.primary-skill {
-  grid-column: span 2;
-}
-
-.skill-icon {
-  display: inline-grid;
-  place-items: center;
-  width: 64px;
-  height: 64px;
-  margin-bottom: 18px;
-  border: 3px solid var(--line);
-  color: #11121a;
-  background: var(--accent);
-  box-shadow: 4px 4px 0 var(--shadow);
-  font-size: 1.1rem;
-  font-weight: 900;
-  clip-path: var(--pixel-cut);
-}
-
 .message-form {
   display: grid;
   gap: 14px;
@@ -847,12 +843,6 @@ textarea:focus {
 
   .post-grid {
     grid-template-columns: 1fr;
-  }
-
-  .skill-grid,
-  .primary-skill {
-    grid-template-columns: 1fr;
-    grid-column: auto;
   }
 
   .profile-terminal {

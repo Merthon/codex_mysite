@@ -6,7 +6,6 @@
 
 - `index.html`：主页
 - `posts.html`：笔记列表，支持搜索和标签筛选
-- `stack.html`：技术栈页面
 - `archive.html`：时间线档案
 - `about.html`：关于页面
 - `guestbook.html`：本地留言板
