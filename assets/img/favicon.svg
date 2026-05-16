@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Leo Merthon icon">
+  <path fill="#06070b" d="M20 4h24v4h8v8h8v28h-8v8h-8v8H20v-8h-8v-8H4V20h8v-8h8z"/>
+  <path fill="#1b1d2a" d="M20 8h24v4h8v8h4v24h-8v8h-8v4H20v-4h-8v-8H8V20h8v-8h4z"/>
+  <path fill="#72f1a7" d="M20 12h24v4h8v28h-8v8H20v-4h-8V20h8z"/>
+  <path fill="#f6f2de" d="M18 22h6v18h10v6H18zM36 22h6v6h4v-6h6v24h-6V34h-4v8h-6z"/>
+  <path fill="#ffcf56" d="M12 20h4v4h-4zM48 16h4v4h-4zM44 48h4v4h-4z"/>
+</svg>
