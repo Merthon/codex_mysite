@@ -448,14 +448,14 @@ h3 {
 .social-dock {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
 }
 
 .social-dock a {
   display: grid;
   place-items: center;
-  min-height: 42px;
+  min-height: 46px;
   border: 2px solid var(--line);
   color: var(--text);
   background: var(--panel-2);
@@ -470,6 +470,13 @@ h3 {
   background: var(--accent-2);
   transform: translate(2px, 2px);
   box-shadow: 1px 1px 0 var(--shadow);
+}
+
+.pixel-icon {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+  shape-rendering: crispEdges;
 }
 
 .status-grid div {
