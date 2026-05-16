@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pixel Log | 个人博客</title>
+    <meta name="description" content="一个像素风个人博客，记录日常、作品和碎片想法。">
+    <link rel="icon" type="image/jpeg" href="assets/img/my.jpg">
+    <link rel="apple-touch-icon" href="assets/img/my.jpg">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body data-page="home">
+    <div class="scanline" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="回到首页">
+        <span class="brand-icon"><img src="assets/img/my.jpg" alt=""></span>
+        <span>Pixel Log</span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="index.html">主页</a>
+        <a href="posts.html">文章</a>
+        <a href="archive.html">档案</a>
+        <a href="about.html">关于</a>
+        <a href="guestbook.html">留言</a>
+      </nav>
+      <button class="icon-button" type="button" data-theme-toggle aria-label="切换主题" title="切换主题">◐</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="pixel-grid" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">NOW LOADING / PERSONAL BLOG</p>
+          <h1>把日常拆成<br><span class="no-break">8-bit 光点</span><br>再慢慢存档。</h1>
+          <p class="lead">这里放作品、笔记、灵感和一些正在发光的小计划。欢迎来到我的像素世界。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="posts.html">读取文章</a>
+            <a class="button ghost" href="guestbook.html">写留言</a>
+          </div>
+        </div>
+        <aside class="profile-terminal" aria-label="个人状态卡">
+          <img class="avatar pixel-avatar" src="assets/img/my.jpg" alt="个人头像">
+          <div>
+            <p class="terminal-label">PLAYER</p>
+            <h2>Chenyu</h2>
+            <p class="typing" data-typing="写代码 / 做页面 / 记录生活 / 收集灵感"></p>
+          </div>
+          <dl class="status-grid">
+            <div>
+              <dt>LEVEL</dt>
+              <dd>26</dd>
+            </div>
+            <div>
+              <dt>MODE</dt>
+              <dd>Blog</dd>
+            </div>
+            <div>
+              <dt>ENERGY</dt>
+              <dd><span data-energy>87</span>%</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="section two-col">
+        <div>
+          <p class="eyebrow">RECENT POSTS</p>
+          <h2>最近更新</h2>
+        </div>
+        <div class="post-list compact-list">
+          <article class="post-card">
+            <span class="post-tag">创作</span>
+            <h3><a href="post-pixel-room.html">给自己搭一个像素房间</a></h3>
+            <p>从颜色、网格和微动效开始，让页面像一台会呼吸的小掌机。</p>
+            <time datetime="2026-05-16">2026.05.16</time>
+          </article>
+          <article class="post-card">
+            <span class="post-tag">日常</span>
+            <h3><a href="post-desk-notes.html">桌面上的小型宇宙</a></h3>
+            <p>关于书、咖啡、任务清单，以及如何在杂乱里保持一点秩序。</p>
+            <time datetime="2026-05-10">2026.05.10</time>
+          </article>
+        </div>
+      </section>
+
+      <section class="section console-strip">
+        <div>
+          <p class="eyebrow">LIVE PANEL</p>
+          <h2>今日运行日志</h2>
+        </div>
+        <div class="console-box" aria-live="polite">
+          <p><span>&gt;</span> <span data-rotator>正在整理灵感碎片...</span></p>
+          <p><span>&gt;</span> 本地时间：<span data-clock>--:--:--</span></p>
+          <p><span>&gt;</span> 站点状态：ONLINE</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Pixel Log</span>
+      <span>Built with HTML / CSS / JS</span>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

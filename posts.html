@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文章 | Pixel Log</title>
+    <meta name="description" content="Pixel Log 的文章列表。">
+    <link rel="icon" type="image/jpeg" href="assets/img/my.jpg">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body data-page="posts">
+    <div class="scanline" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="回到首页">
+        <span class="brand-icon"><img src="assets/img/my.jpg" alt=""></span>
+        <span>Pixel Log</span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="index.html">主页</a>
+        <a href="posts.html">文章</a>
+        <a href="archive.html">档案</a>
+        <a href="about.html">关于</a>
+        <a href="guestbook.html">留言</a>
+      </nav>
+      <button class="icon-button" type="button" data-theme-toggle aria-label="切换主题" title="切换主题">◐</button>
+    </header>
+
+    <main>
+      <section class="page-title">
+        <p class="eyebrow">BLOG INVENTORY</p>
+        <h1>文章仓库</h1>
+        <p>可以搜索，也可以按标签筛选。以后新增文章，只要照着卡片格式继续加就行。</p>
+      </section>
+
+      <section class="toolbar" aria-label="文章筛选">
+        <label class="search-box">
+          <span>SEARCH</span>
+          <input type="search" data-post-search placeholder="输入关键词">
+        </label>
+        <div class="tag-filters" role="list" aria-label="标签筛选">
+          <button class="chip is-active" type="button" data-filter="all">全部</button>
+          <button class="chip" type="button" data-filter="创作">创作</button>
+          <button class="chip" type="button" data-filter="日常">日常</button>
+          <button class="chip" type="button" data-filter="技术">技术</button>
+        </div>
+      </section>
+
+      <section class="post-grid" data-post-container>
+        <article class="post-card" data-tags="创作 技术" data-title="给自己搭一个像素房间">
+          <span class="post-tag">创作</span>
+          <h2><a href="post-pixel-room.html">给自己搭一个像素房间</a></h2>
+          <p>从调色板、像素网格、头像处理到动效细节，记录这个博客的搭建方式。</p>
+          <time datetime="2026-05-16">2026.05.16</time>
+        </article>
+        <article class="post-card" data-tags="日常" data-title="桌面上的小型宇宙">
+          <span class="post-tag">日常</span>
+          <h2><a href="post-desk-notes.html">桌面上的小型宇宙</a></h2>
+          <p>桌面整理、任务节奏和一点点让生活变得顺手的仪式感。</p>
+          <time datetime="2026-05-10">2026.05.10</time>
+        </article>
+        <article class="post-card" data-tags="技术" data-title="静态站也可以很好玩">
+          <span class="post-tag">技术</span>
+          <h2><a href="post-static-fun.html">静态站也可以很好玩</a></h2>
+          <p>不用复杂框架，也能做搜索、主题、留言板和页面状态记忆。</p>
+          <time datetime="2026-05-02">2026.05.02</time>
+        </article>
+      </section>
+      <p class="empty-state" data-empty-state hidden>没有匹配的文章，换个关键词试试。</p>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Pixel Log</span>
+      <span><a href="index.html">返回主页</a></span>
+    </footer>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

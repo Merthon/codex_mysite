@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>留言 | Pixel Log</title>
+    <meta name="description" content="Pixel Log 的本地留言板。">
+    <link rel="icon" type="image/jpeg" href="assets/img/my.jpg">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body data-page="guestbook">
+    <div class="scanline" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="回到首页">
+        <span class="brand-icon"><img src="assets/img/my.jpg" alt=""></span>
+        <span>Pixel Log</span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="index.html">主页</a>
+        <a href="posts.html">文章</a>
+        <a href="archive.html">档案</a>
+        <a href="about.html">关于</a>
+        <a href="guestbook.html">留言</a>
+      </nav>
+      <button class="icon-button" type="button" data-theme-toggle aria-label="切换主题" title="切换主题">◐</button>
+    </header>
+
+    <main>
+      <section class="page-title">
+        <p class="eyebrow">GUESTBOOK</p>
+        <h1>本地留言板</h1>
+        <p>留言会保存在当前浏览器里，适合做个人记录或演示互动。</p>
+      </section>
+
+      <section class="guestbook">
+        <form class="message-form" data-guestbook-form>
+          <label>
+            <span>昵称</span>
+            <input name="name" required maxlength="18" placeholder="你的名字">
+          </label>
+          <label>
+            <span>留言</span>
+            <textarea name="message" required maxlength="140" placeholder="写点什么吧"></textarea>
+          </label>
+          <button class="button primary" type="submit">发送留言</button>
+        </form>
+        <div class="message-list" data-message-list aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Pixel Log</span>
+      <span><button class="link-button" type="button" data-clear-messages>清空本地留言</button></span>
+    </footer>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

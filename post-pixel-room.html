@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>给自己搭一个像素房间 | Pixel Log</title>
+    <meta name="description" content="记录 Pixel Log 像素风博客的搭建思路。">
+    <link rel="icon" type="image/jpeg" href="assets/img/my.jpg">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body data-page="article" data-article-id="pixel-room">
+    <div class="scanline" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="回到首页">
+        <span class="brand-icon"><img src="assets/img/my.jpg" alt=""></span>
+        <span>Pixel Log</span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="index.html">主页</a>
+        <a href="posts.html">文章</a>
+        <a href="archive.html">档案</a>
+        <a href="about.html">关于</a>
+        <a href="guestbook.html">留言</a>
+      </nav>
+      <button class="icon-button" type="button" data-theme-toggle aria-label="切换主题" title="切换主题">◐</button>
+    </header>
+    <main class="article-shell">
+      <div class="progress-track" aria-hidden="true"><span data-progress></span></div>
+      <article class="article">
+        <p class="eyebrow">POST / CREATION</p>
+        <h1>给自己搭一个像素房间</h1>
+        <p class="article-meta">2026.05.16 · 创作 · 技术</p>
+        <p>我希望这个博客不是一张安静的纸，而像一台老游戏机：按钮有反馈，头像有颗粒感，页面滚动时能留下读到哪里的痕迹。</p>
+        <h2>第一步：确定像素语言</h2>
+        <p>像素风最重要的不是把所有东西都做成小方块，而是建立清晰的规则：硬边阴影、有限色彩、网格节奏和明确的交互状态。</p>
+        <h2>第二步：让头像进入系统</h2>
+        <p>站点直接使用现有的 <code>my.jpg</code>。通过 CSS 的 <code>image-rendering: pixelated</code> 和方形边框，让头像自然融入页面，同时也把它作为 favicon。</p>
+        <h2>第三步：让静态页面动起来</h2>
+        <p>搜索、筛选、主题切换、阅读进度、留言板都用原生 JavaScript 完成。没有框架也可以有足够的互动，只要功能贴近页面本身。</p>
+      </article>
+      <section class="article-comments" aria-label="文章评论">
+        <h2>本地评论</h2>
+        <form class="message-form small" data-comment-form>
+          <label>
+            <span>昵称</span>
+            <input name="name" required maxlength="18" placeholder="你的名字">
+          </label>
+          <label>
+            <span>评论</span>
+            <textarea name="message" required maxlength="140" placeholder="这篇文章让你想到什么？"></textarea>
+          </label>
+          <button class="button primary" type="submit">保存评论</button>
+        </form>
+        <div class="message-list" data-comment-list></div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span><a href="posts.html">返回文章列表</a></span>
+      <span>© 2026 Pixel Log</span>
+    </footer>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
