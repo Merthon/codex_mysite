@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>档案 | Pixel Log</title>
-    <meta name="description" content="Pixel Log 的时间线档案。">
+    <title>Archive | Leo Merthon</title>
+    <meta name="description" content="Leo Merthon 的时间线档案。">
     <link rel="icon" type="image/jpeg" href="assets/img/my.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
@@ -13,53 +13,55 @@
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="回到首页">
         <span class="brand-icon"><img src="assets/img/my.jpg" alt=""></span>
-        <span>Pixel Log</span>
+        <span>Leo Merthon</span>
       </a>
       <nav class="main-nav" aria-label="主导航">
-        <a href="index.html">主页</a>
-        <a href="posts.html">文章</a>
-        <a href="archive.html">档案</a>
-        <a href="about.html">关于</a>
-        <a href="guestbook.html">留言</a>
+        <a href="index.html" data-i18n="nav.home">主页</a>
+        <a href="posts.html" data-i18n="nav.notes">笔记</a>
+        <a href="stack.html" data-i18n="nav.stack">技术栈</a>
+        <a href="archive.html" data-i18n="nav.archive">档案</a>
+        <a href="about.html" data-i18n="nav.about">关于</a>
+        <a href="guestbook.html" data-i18n="nav.guestbook">留言</a>
       </nav>
+      <button class="lang-button" type="button" data-lang-toggle aria-label="Switch language">EN</button>
       <button class="icon-button" type="button" data-theme-toggle aria-label="切换主题" title="切换主题">◐</button>
     </header>
 
     <main>
       <section class="page-title">
-        <p class="eyebrow">SAVE FILES</p>
-        <h1>时间线档案</h1>
-        <p>每一条记录都是一个存档点。滚动页面时，进度条会记录你读到了哪里。</p>
+        <p class="eyebrow" data-i18n="archive.eyebrow">SAVE FILES</p>
+        <h1 data-i18n="archive.title">时间线档案</h1>
+        <p data-i18n="archive.lead">每一条记录都是一个存档点。滚动页面时，进度条会记录你读到了哪里。</p>
       </section>
       <div class="progress-track" aria-hidden="true"><span data-progress></span></div>
 
       <section class="timeline">
         <article>
           <time datetime="2026-05-16">2026.05.16</time>
-          <h2><a href="post-pixel-room.html">给自己搭一个像素房间</a></h2>
-          <p>站点上线，头像、图标、动效和留言板都接入完成。</p>
+          <h2><a href="post-pixel-room.html" data-i18n="post.ai.title">用 Go 给 AI 应用搭后端底座</a></h2>
+          <p data-i18n="archive.item1">重新整理站点身份，把 AI、Golang 和后端工程放到第一层。</p>
         </article>
         <article>
           <time datetime="2026-05-10">2026.05.10</time>
-          <h2><a href="post-desk-notes.html">桌面上的小型宇宙</a></h2>
-          <p>写下近期的生活整理方法。</p>
+          <h2><a href="post-desk-notes.html" data-i18n="post.life.title">摇滚、民谣、阅读和一颗双鱼脑袋</a></h2>
+          <p data-i18n="archive.item2">写下音乐、阅读、双鱼座与 INFJ 对个人节奏的影响。</p>
         </article>
         <article>
           <time datetime="2026-05-02">2026.05.02</time>
-          <h2><a href="post-static-fun.html">静态站也可以很好玩</a></h2>
-          <p>总结静态页面里的互动思路。</p>
+          <h2><a href="post-static-fun.html" data-i18n="post.backend.title">后端系统的像素级整理</a></h2>
+          <p data-i18n="archive.item3">把后端系统按像素格拆开，重新定义每一块的责任。</p>
         </article>
         <article>
           <time datetime="2026-04-28">2026.04.28</time>
-          <h2>第一张草图</h2>
-          <p>把像素风、个人头像和博客结构画进同一张纸里。</p>
+          <h2 data-i18n="archive.item4Title">第一张草图</h2>
+          <p data-i18n="archive.item4">把个人头像、技术方向和像素风界面放进同一张设计草图里。</p>
         </article>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>© 2026 Pixel Log</span>
-      <span><a href="posts.html">浏览全部文章</a></span>
+      <span>© 2026 Leo Merthon</span>
+      <span><a href="posts.html" data-i18n="footer.readNotes">浏览笔记</a></span>
     </footer>
     <script src="assets/js/main.js" defer></script>
   </body>

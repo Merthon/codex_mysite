@@ -12,6 +12,7 @@
   --accent-4: #6ed3ff;
   --shadow: #06070b;
   --max: 1120px;
+  --pixel-cut: polygon(0 10px, 10px 10px, 10px 0, calc(100% - 10px) 0, calc(100% - 10px) 10px, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 10px calc(100% - 10px), 0 calc(100% - 10px));
 }
 
 :root[data-theme="light"] {
@@ -44,11 +45,13 @@ body {
   font-family: "Courier New", "PingFang SC", "Microsoft YaHei", monospace;
   line-height: 1.65;
   background:
+    repeating-linear-gradient(0deg, transparent 0 23px, rgba(114, 241, 167, 0.08) 23px 24px),
+    repeating-linear-gradient(90deg, transparent 0 23px, rgba(110, 211, 255, 0.07) 23px 24px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     radial-gradient(circle at top left, rgba(114, 241, 167, 0.12), transparent 34rem),
     var(--bg);
-  background-size: 24px 24px, 24px 24px, auto, auto;
+  background-size: auto, auto, 24px 24px, 24px 24px, auto, auto;
 }
 
 a {
@@ -103,7 +106,7 @@ main {
   top: 12px;
   z-index: 10;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   gap: 16px;
   align-items: center;
   min-height: 72px;
@@ -113,6 +116,7 @@ main {
   background: color-mix(in srgb, var(--panel) 90%, transparent);
   box-shadow: 6px 6px 0 var(--shadow);
   backdrop-filter: blur(10px);
+  clip-path: var(--pixel-cut);
 }
 
 .brand,
@@ -137,6 +141,7 @@ main {
   border: 3px solid var(--line);
   background: var(--accent-2);
   box-shadow: 3px 3px 0 var(--shadow);
+  clip-path: var(--pixel-cut);
 }
 
 .brand-icon img,
@@ -158,6 +163,7 @@ main {
 .chip,
 .button,
 .icon-button,
+.lang-button,
 .link-button {
   min-height: 40px;
   border: 2px solid var(--line);
@@ -166,6 +172,7 @@ main {
   box-shadow: 3px 3px 0 var(--shadow);
   cursor: pointer;
   transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+  clip-path: var(--pixel-cut);
 }
 
 .main-nav a {
@@ -196,6 +203,15 @@ main {
   font-weight: 900;
 }
 
+.lang-button {
+  min-width: 48px;
+  height: 44px;
+  padding: 0 10px;
+  color: #11121a;
+  background: var(--accent-2);
+  font-weight: 900;
+}
+
 main {
   padding-block: 48px;
 }
@@ -215,6 +231,40 @@ main {
     linear-gradient(315deg, rgba(255, 111, 145, 0.14), transparent 42%),
     var(--panel);
   box-shadow: 8px 8px 0 var(--shadow);
+  clip-path: var(--pixel-cut);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  z-index: 0;
+  border: 2px solid rgba(246, 242, 222, 0.12);
+  pointer-events: none;
+  clip-path: var(--pixel-cut);
+}
+
+.hero-art {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+  opacity: 0.38;
+  filter: saturate(1.15) contrast(1.08);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--panel) 94%, transparent), rgba(17, 18, 26, 0.7) 55%, rgba(17, 18, 26, 0.35)),
+    repeating-linear-gradient(0deg, transparent 0 15px, rgba(255, 255, 255, 0.045) 15px 16px);
+  pointer-events: none;
 }
 
 .pixel-grid {
@@ -241,7 +291,7 @@ main {
 .toolbar,
 .console-strip {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-copy {
@@ -272,8 +322,14 @@ h3 {
 }
 
 h1 {
-  max-width: 12ch;
+  max-width: 13ch;
   font-size: clamp(2.25rem, 6.5vw, 4.6rem);
+  text-shadow: 4px 4px 0 var(--shadow);
+}
+
+html[lang="en"] h1 {
+  max-width: 17ch;
+  font-size: clamp(2rem, 5vw, 3.75rem);
 }
 
 .page-title h1,
@@ -335,10 +391,12 @@ h3 {
 .post-card,
 .console-box,
 .toolbar,
-.guestbook {
+.guestbook,
+.skill-card {
   border: 3px solid var(--line);
   background: color-mix(in srgb, var(--panel) 94%, black);
   box-shadow: 6px 6px 0 var(--shadow);
+  clip-path: var(--pixel-cut);
 }
 
 .profile-terminal {
@@ -425,6 +483,10 @@ h3 {
 .post-card {
   min-height: 230px;
   padding: 18px;
+  background-image:
+    linear-gradient(90deg, rgba(114, 241, 167, 0.06) 12px, transparent 12px),
+    linear-gradient(rgba(255, 207, 86, 0.05) 12px, transparent 12px);
+  background-size: 48px 48px;
 }
 
 .post-card h2,
@@ -456,6 +518,7 @@ h3 {
   border: 3px solid var(--line);
   background: var(--panel);
   box-shadow: 6px 6px 0 var(--shadow);
+  clip-path: var(--pixel-cut);
 }
 
 .console-box {
@@ -544,6 +607,7 @@ textarea:focus {
   border-left: 6px solid var(--accent);
   background: color-mix(in srgb, var(--panel) 92%, transparent);
   box-shadow: 5px 5px 0 var(--shadow);
+  clip-path: var(--pixel-cut);
 }
 
 .timeline article::before {
@@ -627,6 +691,36 @@ textarea:focus {
 .guestbook {
   align-items: start;
   padding: 18px;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.skill-card {
+  min-height: 260px;
+  padding: 20px;
+}
+
+.primary-skill {
+  grid-column: span 2;
+}
+
+.skill-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+  border: 3px solid var(--line);
+  color: #11121a;
+  background: var(--accent);
+  box-shadow: 4px 4px 0 var(--shadow);
+  font-size: 1.1rem;
+  font-weight: 900;
+  clip-path: var(--pixel-cut);
 }
 
 .message-form {
@@ -746,8 +840,19 @@ textarea:focus {
     justify-content: start;
   }
 
+  .lang-button,
+  .icon-button {
+    justify-self: start;
+  }
+
   .post-grid {
     grid-template-columns: 1fr;
+  }
+
+  .skill-grid,
+  .primary-skill {
+    grid-template-columns: 1fr;
+    grid-column: auto;
   }
 
   .profile-terminal {

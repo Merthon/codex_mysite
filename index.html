@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pixel Log | 个人博客</title>
-    <meta name="description" content="一个像素风个人博客，记录日常、作品和碎片想法。">
+    <title>Leo Merthon | AI Backend Engineer</title>
+    <meta name="description" content="Leo Merthon 的像素风个人网站，记录 AI、Golang、后端工程、阅读和音乐。">
     <link rel="icon" type="image/jpeg" href="assets/img/my.jpg">
     <link rel="apple-touch-icon" href="assets/img/my.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -14,36 +14,39 @@
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="回到首页">
         <span class="brand-icon"><img src="assets/img/my.jpg" alt=""></span>
-        <span>Pixel Log</span>
+        <span>Leo Merthon</span>
       </a>
       <nav class="main-nav" aria-label="主导航">
-        <a href="index.html">主页</a>
-        <a href="posts.html">文章</a>
-        <a href="archive.html">档案</a>
-        <a href="about.html">关于</a>
-        <a href="guestbook.html">留言</a>
+        <a href="index.html" data-i18n="nav.home">主页</a>
+        <a href="posts.html" data-i18n="nav.notes">笔记</a>
+        <a href="stack.html" data-i18n="nav.stack">技术栈</a>
+        <a href="archive.html" data-i18n="nav.archive">档案</a>
+        <a href="about.html" data-i18n="nav.about">关于</a>
+        <a href="guestbook.html" data-i18n="nav.guestbook">留言</a>
       </nav>
+      <button class="lang-button" type="button" data-lang-toggle aria-label="Switch language">EN</button>
       <button class="icon-button" type="button" data-theme-toggle aria-label="切换主题" title="切换主题">◐</button>
     </header>
 
     <main>
       <section class="hero">
+        <img class="hero-art" src="assets/img/leo-pixel-lab.png" alt="" aria-hidden="true">
         <div class="pixel-grid" aria-hidden="true"></div>
         <div class="hero-copy">
-          <p class="eyebrow">NOW LOADING / PERSONAL BLOG</p>
-          <h1>把日常拆成<br><span class="no-break">8-bit 光点</span><br>再慢慢存档。</h1>
-          <p class="lead">这里放作品、笔记、灵感和一些正在发光的小计划。欢迎来到我的像素世界。</p>
+          <p class="eyebrow" data-i18n="home.eyebrow">NOW LOADING / LEO MERTHON</p>
+          <h1 data-i18n="home.title">用 AI 与后端工程，搭建可运行的未来。</h1>
+          <p class="lead" data-i18n="home.lead">我是 Leo Merthon，程序员，关注人工智能、Golang 与后端系统。这里收集我的技术笔记、阅读片段和音乐能量。</p>
           <div class="hero-actions">
-            <a class="button primary" href="posts.html">读取文章</a>
-            <a class="button ghost" href="guestbook.html">写留言</a>
+            <a class="button primary" href="posts.html" data-i18n="home.ctaNotes">读取笔记</a>
+            <a class="button ghost" href="stack.html" data-i18n="home.ctaStack">查看技术栈</a>
           </div>
         </div>
         <aside class="profile-terminal" aria-label="个人状态卡">
           <img class="avatar pixel-avatar" src="assets/img/my.jpg" alt="个人头像">
           <div>
-            <p class="terminal-label">PLAYER</p>
-            <h2>Chenyu</h2>
-            <p class="typing" data-typing="写代码 / 做页面 / 记录生活 / 收集灵感"></p>
+            <p class="terminal-label" data-i18n="home.player">PLAYER</p>
+            <h2>Leo Merthon</h2>
+            <p class="typing" data-typing="AI Engineering / Golang / Backend Systems / Rock & Folk" data-i18n-typing="home.typing"></p>
           </div>
           <dl class="status-grid">
             <div>
@@ -52,7 +55,7 @@
             </div>
             <div>
               <dt>MODE</dt>
-              <dd>Blog</dd>
+              <dd>Lab</dd>
             </div>
             <div>
               <dt>ENERGY</dt>
@@ -64,20 +67,20 @@
 
       <section class="section two-col">
         <div>
-          <p class="eyebrow">RECENT POSTS</p>
-          <h2>最近更新</h2>
+          <p class="eyebrow" data-i18n="home.recentEyebrow">RECENT NOTES</p>
+          <h2 data-i18n="home.recentTitle">最近更新</h2>
         </div>
         <div class="post-list compact-list">
           <article class="post-card">
-            <span class="post-tag">创作</span>
-            <h3><a href="post-pixel-room.html">给自己搭一个像素房间</a></h3>
-            <p>从颜色、网格和微动效开始，让页面像一台会呼吸的小掌机。</p>
+            <span class="post-tag" data-i18n="tag.ai">AI</span>
+            <h3><a href="post-pixel-room.html" data-i18n="post.ai.title">用 Go 给 AI 应用搭后端底座</a></h3>
+            <p data-i18n="post.ai.excerpt">从请求编排、流式响应到任务队列，整理 AI 应用背后的工程问题。</p>
             <time datetime="2026-05-16">2026.05.16</time>
           </article>
           <article class="post-card">
-            <span class="post-tag">日常</span>
-            <h3><a href="post-desk-notes.html">桌面上的小型宇宙</a></h3>
-            <p>关于书、咖啡、任务清单，以及如何在杂乱里保持一点秩序。</p>
+            <span class="post-tag" data-i18n="tag.life">Life</span>
+            <h3><a href="post-desk-notes.html" data-i18n="post.life.title">摇滚、民谣、阅读和一颗双鱼脑袋</a></h3>
+            <p data-i18n="post.life.excerpt">把音乐、书和性格关键词放在一起，看它们如何影响写代码的人。</p>
             <time datetime="2026-05-10">2026.05.10</time>
           </article>
         </div>
@@ -85,19 +88,19 @@
 
       <section class="section console-strip">
         <div>
-          <p class="eyebrow">LIVE PANEL</p>
-          <h2>今日运行日志</h2>
+          <p class="eyebrow" data-i18n="home.liveEyebrow">LIVE PANEL</p>
+          <h2 data-i18n="home.liveTitle">当前运行状态</h2>
         </div>
         <div class="console-box" aria-live="polite">
-          <p><span>&gt;</span> <span data-rotator>正在整理灵感碎片...</span></p>
-          <p><span>&gt;</span> 本地时间：<span data-clock>--:--:--</span></p>
-          <p><span>&gt;</span> 站点状态：ONLINE</p>
+          <p><span>&gt;</span> <span data-rotator data-i18n-rotator="home.rotator">正在整理 AI 笔记...</span></p>
+          <p><span>&gt;</span> <span data-i18n="home.localTime">本地时间</span>：<span data-clock>--:--:--</span></p>
+          <p><span>&gt;</span> <span data-i18n="home.siteStatus">系统状态：ONLINE</span></p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>© 2026 Pixel Log</span>
+      <span>© 2026 Leo Merthon</span>
       <span>Built with HTML / CSS / JS</span>
     </footer>
 

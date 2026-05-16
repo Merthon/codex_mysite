@@ -1,19 +1,20 @@
-# Pixel Log
+# Leo Merthon
 
-一个多页像素风个人博客，使用纯 HTML、CSS、JavaScript 构建。
+一个多页像素风个人网站，使用纯 HTML、CSS、JavaScript 构建。内容方向围绕 AI、Golang、后端工程、阅读和音乐。
 
 ## 页面
 
 - `index.html`：主页
-- `posts.html`：文章列表，支持搜索和标签筛选
+- `posts.html`：笔记列表，支持搜索和标签筛选
+- `stack.html`：技术栈页面
 - `archive.html`：时间线档案
 - `about.html`：关于页面
 - `guestbook.html`：本地留言板
-- `post-*.html`：文章详情页，支持本地评论
+- `post-*.html`：笔记详情页，支持本地评论
 
 ## 素材
 
-站点头像和 icon 都复用 `assets/img/my.jpg`。图片未通过脚本生成。
+站点头像和 icon 都复用 `assets/img/my.jpg`。首页主视觉为生成式像素风图片 `assets/img/leo-pixel-lab.png`，没有通过脚本生成。
 
 ## 使用
 

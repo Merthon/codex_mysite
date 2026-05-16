@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>静态站也可以很好玩 | Pixel Log</title>
-    <meta name="description" content="关于静态博客互动功能的文章。">
+    <title>后端系统的像素级整理 | Leo Merthon</title>
+    <meta name="description" content="Leo Merthon 关于后端系统拆解的笔记。">
     <link rel="icon" type="image/jpeg" href="assets/img/my.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
@@ -13,42 +13,44 @@
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="回到首页">
         <span class="brand-icon"><img src="assets/img/my.jpg" alt=""></span>
-        <span>Pixel Log</span>
+        <span>Leo Merthon</span>
       </a>
       <nav class="main-nav" aria-label="主导航">
-        <a href="index.html">主页</a>
-        <a href="posts.html">文章</a>
-        <a href="archive.html">档案</a>
-        <a href="about.html">关于</a>
-        <a href="guestbook.html">留言</a>
+        <a href="index.html" data-i18n="nav.home">主页</a>
+        <a href="posts.html" data-i18n="nav.notes">笔记</a>
+        <a href="stack.html" data-i18n="nav.stack">技术栈</a>
+        <a href="archive.html" data-i18n="nav.archive">档案</a>
+        <a href="about.html" data-i18n="nav.about">关于</a>
+        <a href="guestbook.html" data-i18n="nav.guestbook">留言</a>
       </nav>
+      <button class="lang-button" type="button" data-lang-toggle aria-label="Switch language">EN</button>
       <button class="icon-button" type="button" data-theme-toggle aria-label="切换主题" title="切换主题">◐</button>
     </header>
     <main class="article-shell">
       <div class="progress-track" aria-hidden="true"><span data-progress></span></div>
       <article class="article">
-        <p class="eyebrow">POST / TECH</p>
-        <h1>静态站也可以很好玩</h1>
-        <p class="article-meta">2026.05.02 · 技术</p>
-        <p>个人博客不一定需要复杂后台。很多体验可以通过少量前端脚本完成，而且更轻、更容易部署。</p>
-        <h2>交互从局部开始</h2>
-        <p>文章搜索、主题切换、阅读进度和本地留言，都不需要服务器。它们只需要清楚的状态和友好的反馈。</p>
-        <h2>内容仍然是主角</h2>
-        <p>动效最好像背景音乐，能增强氛围，但不能抢走文章本身的注意力。</p>
+        <p class="eyebrow" data-i18n="article.backend.eyebrow">NOTE / BACKEND MAP</p>
+        <h1 data-i18n="post.backend.title">后端系统的像素级整理</h1>
+        <p class="article-meta" data-i18n="article.backend.meta">2026.05.02 · Backend · Golang</p>
+        <p data-i18n="article.backend.p1">我理解后端系统时，会把它拆成一个个像素块：接口、数据、缓存、队列、任务、鉴权、观测、部署。每一块都要有清楚边界。</p>
+        <h2 data-i18n="article.backend.h1">接口是地图入口</h2>
+        <p data-i18n="article.backend.p2">好的接口能让调用方知道自己站在哪里，也能让服务端保持演进空间。命名、错误码和版本策略都不是小事。</p>
+        <h2 data-i18n="article.backend.h2">系统需要可观察</h2>
+        <p data-i18n="article.backend.p3">日志、指标、链路追踪和告警，是后端工程的仪表盘。没有仪表盘的系统，跑得越快越危险。</p>
       </article>
-      <section class="article-comments" aria-label="文章评论">
-        <h2>本地评论</h2>
+      <section class="article-comments" aria-label="笔记评论">
+        <h2 data-i18n="comments.title">本地评论</h2>
         <form class="message-form small" data-comment-form>
-          <label><span>昵称</span><input name="name" required maxlength="18" placeholder="你的名字"></label>
-          <label><span>评论</span><textarea name="message" required maxlength="140" placeholder="这篇文章让你想到什么？"></textarea></label>
-          <button class="button primary" type="submit">保存评论</button>
+          <label><span data-i18n="form.name">昵称</span><input name="name" required maxlength="18" placeholder="你的名字" data-i18n-placeholder="form.namePlaceholder"></label>
+          <label><span data-i18n="form.comment">评论</span><textarea name="message" required maxlength="140" placeholder="这篇笔记让你想到什么？" data-i18n-placeholder="form.commentPlaceholder"></textarea></label>
+          <button class="button primary" type="submit" data-i18n="comments.submit">保存评论</button>
         </form>
         <div class="message-list" data-comment-list></div>
       </section>
     </main>
     <footer class="site-footer">
-      <span><a href="posts.html">返回文章列表</a></span>
-      <span>© 2026 Pixel Log</span>
+      <span><a href="posts.html" data-i18n="footer.backNotes">返回笔记列表</a></span>
+      <span>© 2026 Leo Merthon</span>
     </footer>
     <script src="assets/js/main.js" defer></script>
   </body>

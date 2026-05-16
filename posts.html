@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>文章 | Pixel Log</title>
-    <meta name="description" content="Pixel Log 的文章列表。">
+    <title>Notes | Leo Merthon</title>
+    <meta name="description" content="Leo Merthon 的技术与生活笔记。">
     <link rel="icon" type="image/jpeg" href="assets/img/my.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
@@ -13,64 +13,67 @@
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="回到首页">
         <span class="brand-icon"><img src="assets/img/my.jpg" alt=""></span>
-        <span>Pixel Log</span>
+        <span>Leo Merthon</span>
       </a>
       <nav class="main-nav" aria-label="主导航">
-        <a href="index.html">主页</a>
-        <a href="posts.html">文章</a>
-        <a href="archive.html">档案</a>
-        <a href="about.html">关于</a>
-        <a href="guestbook.html">留言</a>
+        <a href="index.html" data-i18n="nav.home">主页</a>
+        <a href="posts.html" data-i18n="nav.notes">笔记</a>
+        <a href="stack.html" data-i18n="nav.stack">技术栈</a>
+        <a href="archive.html" data-i18n="nav.archive">档案</a>
+        <a href="about.html" data-i18n="nav.about">关于</a>
+        <a href="guestbook.html" data-i18n="nav.guestbook">留言</a>
       </nav>
+      <button class="lang-button" type="button" data-lang-toggle aria-label="Switch language">EN</button>
       <button class="icon-button" type="button" data-theme-toggle aria-label="切换主题" title="切换主题">◐</button>
     </header>
 
     <main>
       <section class="page-title">
-        <p class="eyebrow">BLOG INVENTORY</p>
-        <h1>文章仓库</h1>
-        <p>可以搜索，也可以按标签筛选。以后新增文章，只要照着卡片格式继续加就行。</p>
+        <p class="eyebrow" data-i18n="notes.eyebrow">NOTE INVENTORY</p>
+        <h1 data-i18n="notes.title">笔记仓库</h1>
+        <p data-i18n="notes.lead">围绕 AI、Golang、后端系统，也收纳音乐、阅读与生活碎片。</p>
       </section>
 
-      <section class="toolbar" aria-label="文章筛选">
+      <section class="toolbar" aria-label="笔记筛选">
         <label class="search-box">
           <span>SEARCH</span>
-          <input type="search" data-post-search placeholder="输入关键词">
+          <input type="search" data-post-search placeholder="输入关键词" data-i18n-placeholder="notes.searchPlaceholder">
         </label>
         <div class="tag-filters" role="list" aria-label="标签筛选">
-          <button class="chip is-active" type="button" data-filter="all">全部</button>
-          <button class="chip" type="button" data-filter="创作">创作</button>
-          <button class="chip" type="button" data-filter="日常">日常</button>
-          <button class="chip" type="button" data-filter="技术">技术</button>
+          <button class="chip is-active" type="button" data-filter="all" data-i18n="filter.all">全部</button>
+          <button class="chip" type="button" data-filter="AI" data-i18n="tag.ai">AI</button>
+          <button class="chip" type="button" data-filter="Golang">Golang</button>
+          <button class="chip" type="button" data-filter="Backend">Backend</button>
+          <button class="chip" type="button" data-filter="Life" data-i18n="tag.life">Life</button>
         </div>
       </section>
 
       <section class="post-grid" data-post-container>
-        <article class="post-card" data-tags="创作 技术" data-title="给自己搭一个像素房间">
-          <span class="post-tag">创作</span>
-          <h2><a href="post-pixel-room.html">给自己搭一个像素房间</a></h2>
-          <p>从调色板、像素网格、头像处理到动效细节，记录这个博客的搭建方式。</p>
+        <article class="post-card" data-tags="AI Golang Backend" data-title="用 Go 给 AI 应用搭后端底座">
+          <span class="post-tag" data-i18n="tag.ai">AI</span>
+          <h2><a href="post-pixel-room.html" data-i18n="post.ai.title">用 Go 给 AI 应用搭后端底座</a></h2>
+          <p data-i18n="post.ai.excerpt">从请求编排、流式响应到任务队列，整理 AI 应用背后的工程问题。</p>
           <time datetime="2026-05-16">2026.05.16</time>
         </article>
-        <article class="post-card" data-tags="日常" data-title="桌面上的小型宇宙">
-          <span class="post-tag">日常</span>
-          <h2><a href="post-desk-notes.html">桌面上的小型宇宙</a></h2>
-          <p>桌面整理、任务节奏和一点点让生活变得顺手的仪式感。</p>
+        <article class="post-card" data-tags="Life Reading Music" data-title="摇滚、民谣、阅读和一颗双鱼脑袋">
+          <span class="post-tag" data-i18n="tag.life">Life</span>
+          <h2><a href="post-desk-notes.html" data-i18n="post.life.title">摇滚、民谣、阅读和一颗双鱼脑袋</a></h2>
+          <p data-i18n="post.life.excerpt">把音乐、书和性格关键词放在一起，看它们如何影响写代码的人。</p>
           <time datetime="2026-05-10">2026.05.10</time>
         </article>
-        <article class="post-card" data-tags="技术" data-title="静态站也可以很好玩">
-          <span class="post-tag">技术</span>
-          <h2><a href="post-static-fun.html">静态站也可以很好玩</a></h2>
-          <p>不用复杂框架，也能做搜索、主题、留言板和页面状态记忆。</p>
+        <article class="post-card" data-tags="Backend Golang" data-title="后端系统的像素级整理">
+          <span class="post-tag">Backend</span>
+          <h2><a href="post-static-fun.html" data-i18n="post.backend.title">后端系统的像素级整理</a></h2>
+          <p data-i18n="post.backend.excerpt">把服务拆成接口、数据、队列、观测和部署，每一格都要能解释清楚。</p>
           <time datetime="2026-05-02">2026.05.02</time>
         </article>
       </section>
-      <p class="empty-state" data-empty-state hidden>没有匹配的文章，换个关键词试试。</p>
+      <p class="empty-state" data-empty-state hidden data-i18n="notes.empty">没有匹配的笔记，换个关键词试试。</p>
     </main>
 
     <footer class="site-footer">
-      <span>© 2026 Pixel Log</span>
-      <span><a href="index.html">返回主页</a></span>
+      <span>© 2026 Leo Merthon</span>
+      <span><a href="index.html" data-i18n="footer.backHome">返回主页</a></span>
     </footer>
     <script src="assets/js/main.js" defer></script>
   </body>
